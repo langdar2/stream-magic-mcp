@@ -15,7 +15,7 @@ A powerful MCP (Model Context Protocol) server and modern web-based dashboard fo
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/langdar2/stream-magic-mcp.git
 cd streammagic-mcp
 
 # Install dependencies
