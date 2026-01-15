@@ -1,0 +1,31 @@
+[project]
+name = "streammagic-mcp"
+version = "0.1.0"
+description = "MCP server for Cambridge Audio Stream Magic devices"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]>=0.1.0",
+    "aiostreammagic>=2.11.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-mock>=3.10.0"
+]
+web = [
+    "fastapi>=0.100.0",
+    "uvicorn>=0.20.0"
+]
+
+[project.scripts]
+streammagic-mcp = "streammagic_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
